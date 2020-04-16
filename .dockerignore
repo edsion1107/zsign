@@ -1,3 +1,7 @@
-.gitignore
-Dockerfile
-Readme.md
+zsign
+.vscode
+*.dSYM
+*.ipa
+.zsign*
+.xmake
+build

@@ -1,0 +1,12 @@
+FROM ubuntu:18.04
+WORKDIR /zsign
+COPY . src/
+
+RUN sed -i s@/archive.ubuntu.com/@/mirrors.tencent.com/@g /etc/apt/sources.list && \
+	apt-get update && \
+	DEBIAN_FRONTEND=noninteractive apt-get install -y g++ libssl-dev && \
+	g++ src/*.cpp src/common/*.cpp -lcrypto -O3 -o zsign && \
+	rm -rf src
+
+ENTRYPOINT ["/zsign/zsign"]
+CMD ["--help"]
