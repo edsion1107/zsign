@@ -1,3 +1,5 @@
+set_project("zsign")
+set_version("0.2", {build = "%Y%m%d%H%M"})
 -- add rules: debug/release
 add_rules("mode.debug", "mode.release")
 
@@ -8,8 +10,10 @@ add_requires("openssl")
 target("zsign")
     set_kind("binary")
     add_files("*.cpp", "common/*.cpp")
-    add_packages("openssl")
-
+    -- add_packages("openssl")
+    on_load(function (target)
+        target:add(find_packages("brew::openssl@1.1"))
+    end)
 --
 -- FAQ
 --
