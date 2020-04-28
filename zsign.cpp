@@ -47,7 +47,7 @@ int usage()
 	ZLog::Print("-w, --weak\t\tInject dylib as LC_LOAD_WEAK_DYLIB.\n");
 	ZLog::Print("-i, --install\t\tInstall ipa file using ideviceinstaller command for test.\n");
 	ZLog::Print("-q, --quiet\t\tQuiet operation.\n");
-	ZLog::Print("-v, --version\t\tShow version.\n");
+	ZLog::Print("-v, -version\t\tShow version.\n");
 	ZLog::Print("-h, --help\t\tShow help.\n");
 
 	return -1;
@@ -125,7 +125,7 @@ int main(int argc, char *argv[])
 			break;
 		case 'v':
 		{
-			printf("version: 0.2\n");
+			printf("version: 0.2-20200428\n");
 			return 0;
 		}
 		break;

@@ -1,5 +1,5 @@
 set_project("zsign")
-set_version("0.2", {build = "%Y%m%d%H%M"})
+set_version("0.2-20200428")
 -- add rules: debug/release
 add_rules("mode.debug", "mode.release")
 
