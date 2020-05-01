@@ -12,7 +12,7 @@ target("zsign")
     add_files("*.cpp", "common/*.cpp")
     -- add_packages("openssl")
     on_load(function (target)
-        target:add(find_packages("brew::openssl@1.1"))
+        target:add(find_packages("brew::openssl"))
     end)
 --
 -- FAQ
