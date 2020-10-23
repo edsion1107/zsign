@@ -2,7 +2,6 @@ set_project("zsign")
 set_version("0.3-20201023")
 -- add rules: debug/release
 
-
 add_rules("mode.debug", "mode.release")
 
 -- add requires
